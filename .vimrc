@@ -1,6 +1,9 @@
 " Pathogen
 execute pathogen#infect()
 
+" Nerd tree toggle
+map <C-o> :NERDTreeToggle<CR>
+
 " Basic navigation things
 filetype on
 syntax on

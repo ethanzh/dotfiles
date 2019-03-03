@@ -1,3 +1,6 @@
+" Pathogen
+execute pathogen#infect()
+
 " Basic navigation things
 filetype on
 syntax on
@@ -30,3 +33,5 @@ autocmd Filetype c setlocal autoindent cindent expandtab tabstop=2 shiftwidth=2 
 " autocmd vimenter * NERDTree
 
 " Test comment from Mac to Linux
+execute pathogen#infect()
+call pathogen#helptags()

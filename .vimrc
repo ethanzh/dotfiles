@@ -26,4 +26,4 @@ let g:gruvbox_contrast_dark = 'hard'
 " C indenting
 autocmd Filetype c setlocal autoindent cindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
-" Add more things here
+" Test comment from Mac to Linux

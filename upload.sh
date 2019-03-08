@@ -15,7 +15,9 @@ echo "Uploading to GitHub"
 echo "Adding files"
 git add .
 echo "Committing files"
-git commit -m "Update dotfiles"
+echo "Enter commit message:"
+read msg
+git commit -m "$msg" 
 echo "Pushing files"
 git push
 

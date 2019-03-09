@@ -7,9 +7,9 @@ echo ".vimrc -> ~/.vimrc"
 cp ~/.vimrc .vimrc
 echo "Done copying .vimrc"
 
-echo ".zshrc -> ~/.zshrc"
-cp ~/.zshrc .zshrc
-echo "Done copying .zshrc"
+# echo ".zshrc -> ~/.zshrc"
+# cp ~/.zshrc .zshrc
+# echo "Done copying .zshrc"
 
 echo "Uploading to GitHub"
 echo "Adding files"

@@ -7,6 +7,7 @@ echo ".vimrc -> ~/.vimrc"
 cp ~/.vimrc .vimrc
 echo "Done copying .vimrc"
 
+# Keeping these out for now
 # echo ".zshrc -> ~/.zshrc"
 # cp ~/.zshrc .zshrc
 # echo "Done copying .zshrc"

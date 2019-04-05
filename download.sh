@@ -15,7 +15,6 @@ if [ "$choice" -eq "1" ]; then
 	echo ".vimrc -> ~/.vimrc"
 	cp .vimrc ~/.vimrc
 fi
-
 # if [ "$choice" -eq "2" ]; then
 # 	echo ".zshrc -> ~/.zshrc"
 #	cp .zshrc ~/.zshrc

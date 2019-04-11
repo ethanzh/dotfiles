@@ -13,7 +13,7 @@ set number
 
 " Explorer stuff
 let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 0 "3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
@@ -21,6 +21,20 @@ augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
 augroup END
+autocmd FileType netrw setl bufhidden=wipe
+aug netrw_close
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"|q|endif
+aug END
+" close if final buffer is netrw or the quickfix
+augroup finalcountdown
+ au!
+ "autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) || &buftype == 'quickfix' | q | endif
+ "nmap - :Lexplore<cr>
+ nmap - :NERDTreeToggle<cr>
+augroup END
+autocmd VimEnter * if (argc() > 0 && filereadable(argv()[0])) | wincmd l | endif
 
 " Go stuff
 call plug#begin()

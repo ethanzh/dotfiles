@@ -1,5 +1,4 @@
 #!/bin/sh
-# test comment
 clear
 
 echo "Copying vimrc"

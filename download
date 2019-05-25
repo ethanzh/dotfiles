@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # This file copies files from Git into local
 
 echo "Pulling from GitHub"

@@ -14,7 +14,6 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh

@@ -14,8 +14,6 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 ENABLE_CORRECTION="true"
 
-COMPLETION_WAITING_DOTS="true"
-
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
@@ -34,3 +32,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # NVM magic
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Chartmetric stuff
+export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
+alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'

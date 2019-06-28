@@ -5,7 +5,7 @@ autocmd! bufwritepost .vimrc source %
 set bs=2
 
 " time for git gutter
-set updatetime=100
+set updatetime=150
 
 "Remap ; to :
 nnoremap ; :

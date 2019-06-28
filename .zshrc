@@ -33,6 +33,11 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# This makes npm packages work?
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH="$HOME/.npm-packages/bin:$PATH"
+source $HOME/.bashrc
+
 # Chartmetric stuff
 export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
 alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'

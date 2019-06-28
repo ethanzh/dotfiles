@@ -27,7 +27,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 compctl -g '~/.itermocil/*(:t:r)' itermocil
 
 # autocomplete
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # NVM magic
 export NVM_DIR=~/.nvm
@@ -42,5 +43,12 @@ source $HOME/.bashrc
 export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
 alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'
 
+plugins=(colorize copydir colored-man-pages zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+
+# autosuggest
+bindkey '^ ' autosuggest-accept
+
 unalias ls
 alias ls='ls -G'
+
+alias zshconfig='vim ~/.zshrc'

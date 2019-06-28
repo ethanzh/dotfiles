@@ -41,3 +41,6 @@ source $HOME/.bashrc
 # Chartmetric stuff
 export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
 alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'
+
+unalias ls
+alias ls='ls -G'

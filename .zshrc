@@ -16,7 +16,7 @@ ENABLE_CORRECTION="true"
 
 # source plugins
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,10 +43,10 @@ source $HOME/.bashrc
 export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
 alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'
 
-plugins=(colored-man-pages zsh-autosuggestions) # zsh-syntax-highlighting)
+plugins=(colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
 # autosuggest
-# bindkey '' autosuggest-accept
+bindkey '^ ' autosuggest-accept
 
 unalias ls
 alias ls='ls -G'

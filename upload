@@ -9,9 +9,9 @@ echo "~/.zshrc -> .zshrc"
 cp ~/.zshrc .zshrc
 echo "Done copying .zshrc"
 
-echo "~/.oh-my-zsh -> .oh-my-zsh"
-cp -r  ~/.oh-my-zsh .oh-my-zsh/
-echo "Done copying .oh-my-zsh"
+#echo "~/.oh-my-zsh -> .oh-my-zsh"
+#cp -r  ~/.oh-my-zsh .oh-my-zsh/
+#echo "Done copying .oh-my-zsh"
 
 echo "Uploading to GitHub"
 echo "Adding files"

@@ -18,13 +18,14 @@ ENABLE_CORRECTION="true"
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 
 export EDITOR='vim'
 
-# ssh
+# ssh keys
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # itermocil install

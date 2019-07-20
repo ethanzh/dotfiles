@@ -1,5 +1,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
+export CLICOLOR=1
+export TERM=xterm-256color
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ethanzh/.oh-my-zsh"
@@ -51,6 +53,15 @@ bindkey '^ ' autosuggest-accept
 
 unalias ls
 alias ls='ls -G'
+
+# Pipe Highlight to less
+export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style solarized-light"
+export LESS=" -R"
+alias less='less -m -N -g -i -J --line-numbers --underline-special'
+alias more='less'
+
+# Use "highlight" in place of "cat"
+alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light"
 
 alias zshconfig='vim ~/.zshrc'
 

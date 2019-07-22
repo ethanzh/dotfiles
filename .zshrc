@@ -64,4 +64,3 @@ alias more='less'
 alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light"
 
 alias zshconfig='vim ~/.zshrc'
-

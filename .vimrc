@@ -7,6 +7,10 @@ set relativenumber
 " Fix weird backspace behavior
 set backspace=indent,eol,start
 
+" Folding
+set foldmethod=indent
+set foldlevel=20
+
 silent! if plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'

@@ -4,12 +4,22 @@ syntax on
 set number
 set relativenumber
 
+" File finder
+set path+=**
+set wildmenu
+
+" Tag
+set tags=tags;/
+
 " Fix weird backspace behavior
 set backspace=indent,eol,start
 
 " Folding
 set foldmethod=indent
 set foldlevel=20
+
+" Tags
+command! MakeTags !ctags -R .
 
 silent! if plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
@@ -30,8 +40,6 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:pymode_python = 'python3'
 let g:python_highlight_all = 1
 
-hi Search cterm=NONE ctermfg=red ctermbg=blue
-
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -42,6 +50,7 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 set incsearch
 set hlsearch
 nnoremap <C-l> :nohlsearch<CR><C-l>
+hi Search cterm=NONE ctermfg=red ctermbg=blue
 
 " Fix backspace
 set bs=2
@@ -56,7 +65,7 @@ nnoremap ; :
 let g:netrw_banner = 0
 
 "Color column
-highlight ColorColumn ctermbg=white
+highlight ColorColumn ctermbg=grey
 call matchadd('ColorColumn', '\%81v', 100)
 
 " C indenting

@@ -65,3 +65,5 @@ alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --s
 
 alias zshconfig='vim ~/.zshrc'
 alias vimconfig='vim ~/.vimrc'
+alias ctags="`brew --prefix`/bin/ctags"
+alias makectags='ctags -R . --exclude=venv --exclude=.gitignore --extras=+f'

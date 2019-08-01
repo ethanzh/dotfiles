@@ -8,8 +8,29 @@ set relativenumber
 set path+=**
 set wildmenu
 
+" Leader
+let mapleader = ","
+
+au BufEnter * call MyLastWindow()
+function! MyLastWindow()
+  " if the window is quickfix go on
+  if &buftype=="quickfix"
+    " if this window is last on screen quit without warning
+    if winbufnr(2) == -1
+      quit!
+    endif
+  endif
+endfunction
+
+command GREP :execute 'vimgrep '.expand('<cword>').' '.expand('%') | :copen | :cc
+nnoremap g :GREP<CR>
+nnoremap <C-j>      :cnext<CR>
+nnoremap <C-k>     :cprev<CR>
+
 " Tag
 set tags=tags;/
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " Fix weird backspace behavior
 set backspace=indent,eol,start
@@ -31,6 +52,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ervandew/supertab'
 Plug 'vim-python/python-syntax'
 Plug 'python/black'
+Plug 'majutsushi/tagbar'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 endif
 

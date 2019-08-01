@@ -45,6 +45,7 @@ source $HOME/.bashrc
 # Chartmetric stuff
 export PYTHONPATH="$PYTHONPATH:/Users/ethanzh/Chartmetric/chartmetric_data_script"
 alias cmMetadataServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@52.39.59.240'
+alias newServer='ssh -i ~/.ssh/chartmetric.pem ubuntu@54.188.188.115'
 
 plugins=(colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -66,4 +67,4 @@ alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --s
 alias zshconfig='vim ~/.zshrc'
 alias vimconfig='vim ~/.vimrc'
 alias ctags="`brew --prefix`/bin/ctags"
-alias makectags='ctags -R . --exclude=venv --exclude=.gitignore --extras=+f'
+alias makectags='ctags -R --exclude=venv --exclude=node_modules --exclude=.gitignore --extras=+f'

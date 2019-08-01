@@ -1,3 +1,4 @@
 --python-kinds=-i
+--exclude='**/site-packages/**'
 
 

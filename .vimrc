@@ -22,10 +22,14 @@ function! MyLastWindow()
   endif
 endfunction
 
+" GREP
 command GREP :execute 'vimgrep '.expand('<cword>').' '.expand('%') | :copen | :cc
-nnoremap g :GREP<CR>
+nnoremap S :GREP<CR>
 nnoremap <C-j>      :cnext<CR>
 nnoremap <C-k>     :cprev<CR>
+
+" Close quickly
+nnoremap <C-c> :close<CR>
 
 " Tag
 set tags=tags;/

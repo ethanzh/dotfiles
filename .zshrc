@@ -1,4 +1,5 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 export TERM="xterm-256color"
 export CLICOLOR=1
 export TERM=xterm-256color
@@ -68,3 +69,6 @@ alias zshconfig='vim ~/.zshrc'
 alias vimconfig='vim ~/.vimrc'
 alias ctags="`brew --prefix`/bin/ctags"
 alias makectags='ctags -R --exclude=venv --exclude=node_modules --exclude=.gitignore --extras=+f'
+alias co='git checkout master'
+alias gs='git status'
+alias C='cd ~/Code'

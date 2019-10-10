@@ -30,6 +30,7 @@ Plug 'vim-python/python-syntax'
 Plug 'python/black'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 endif
 

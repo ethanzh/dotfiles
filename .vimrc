@@ -1,7 +1,13 @@
 filetype on
-syntax on
 set number
 set relativenumber
+
+syntax on
+source ~/.vim/plugged/dracula/autoload/dracula.vim
+source ~/.vim/colors/dracula.vim
+colorscheme dracula
+
+set mouse=nicr
 
 let mapleader = ","
 
@@ -19,29 +25,22 @@ set foldlevel=20
 command! MakeTags !ctags -R .
 
 silent! if plug#begin('~/.vim/plugged')
-Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
+Plug 'mhinz/vim-startify' " start screen
+Plug 'tpope/vim-fugitive' " git wrapper
+Plug 'airblade/vim-gitgutter' " git line changes
+Plug 'vim-airline/vim-airline' " buttom line
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ervandew/supertab'
-Plug 'vim-python/python-syntax'
 Plug 'python/black'
-Plug 'majutsushi/tagbar'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 endif
 
 let g:airline_theme='atomic'
-let g:airline#extensions#whitespace#enabled = 0
 
 let g:pymode_python = 'python3'
 let g:python_highlight_all = 1
 
-autocmd! bufwritepost .vimrc source %
-
+" Javascript indentation
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 set incsearch
@@ -53,6 +52,7 @@ set bs=2
 
 set updatetime=150
 
+" Swap ; and :
 nnoremap ; :
 
 let g:netrw_banner = 0

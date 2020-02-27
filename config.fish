@@ -14,6 +14,11 @@ abbr -a -g activate ". venv/bin/activate.fish"
 # utcs lab
 abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"
 
+switch (uname)
+	case Linux
+		set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
+end
+
 # shortcuts to courses
 switch (uname)
 	case Darwin
@@ -25,7 +30,14 @@ switch (uname)
 		abbr -a -g pl "cd ~/School/CS345"
 		abbr -a -g db "cd ~/School/CS327E"
 		abbr -a -g intro "cd ~/School/CS361"
-		abbr -a -g grading "cd ~/School/CS327E/grading-tools"
+		abbr -a -g grading "cd ~/School/grading-tools"
+end
+
+# update shortcuts
+switch (uname)
+	case Darwin
+	case Linux
+		abbr -a -g update "sudo pacman -Syu"
 end
 
 # git shortcuts

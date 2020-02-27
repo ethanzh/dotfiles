@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# take local dotfiles and push to git
+
+if [ "$1" == "vimrc" ]; then
+	cp ~/.vimrc dots/vimrc
+	git add dots/vimrc
+	git commit -m "Edit vimrc"
+	git push
+	echo "Pushed .vimrc"
+fi
+
+if [ "$1" == "fish" ]; then
+	cp ~/.config/fish/config.fish config.fish
+	git add config.fish
+	git commit -m "Edit config.fish"
+	git push
+	echo "Pushed config.fish"
+fi

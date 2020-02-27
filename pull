@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# pull specific dotfile from git
+
+git pull
+
+if [ "$1" == "vimrc" ]; then
+	cp dots/vimrc ~/.vimrc
+	echo "Pulled .vimrc"
+fi
+
+if [ "$1" == "fish" ]; then
+	cp config.fish ~/.config/fish/config.fish
+	cp dots/vimrc ~/.vimrc
+	echo "Pulled config.fish"
+fi

@@ -1,23 +1,36 @@
-set -gx PATH ~/anaconda3/bin $PATH
-set -gx PATH /Users/ethanzh/.local/bin $PATH
+# remove fish prompt
 set fish_greeting
 
-abbr -a -g fishc vim ~/.config/fish/config.fish
-abbr -a -g gs "git status"
+# path
+set -gx PATH /usr/local/bin $PATH
 
+# fish configuration
+abbr -a -g fc vim ~/.config/fish/config.fish
+abbr -a -g theme fish_config
+
+# for python venv
 abbr -a -g activate ". venv/bin/activate.fish"
 
-abbr -a -g dots "cd ~/Code/dotfiles"
-abbr -a -g udots "cd ~/Code/dotfiles;git pull;rsync config.fish ~/.config/fish/config.fish; rsync .vimrc ~/.vimrc; source ~/.config/fish/config.fish; cd -"
-
-abbr -a -g status "echo $status"
-
+# utcs lab
 abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"
 
-abbr -a -g resume "cd ~/Code/latex-resume;echo houston_ethan_resume.tex | xelatex; cd -"
+# shortcuts to courses
+switch (uname)
+	case Darwin
+		abbr -a -g pl "cd ~/UT/Courses/CS345"
+		abbr -a -g db "cd ~/UT/Courses/CS327E"
+		abbr -a -g intro "cd ~/UT/Courses/CS361"
+		abbr -a -g grading "cd ~/UT/Courses/CS327E/grading-tools"
+	case Linux
+		abbr -a -g pl "cd ~/School/CS345"
+		abbr -a -g db "cd ~/School/CS327E"
+		abbr -a -g intro "cd ~/School/CS361"
+		abbr -a -g grading "cd ~/School/CS327E/grading-tools"
+end
 
-abbr -a -g todo "cd ~/todo;cat todo;cd --"
+# git shortcuts
+abbr -a -g gs "git status"
+abbr -a -g glog "git log --all --decorate --oneline --graph"
 
-abbr -a -g pl "cd ~/UT/Courses/CS345"
-abbr -a -g db "cd ~/UT/Courses/CS327E"
-abbr -a -g intro "cd ~/UT/Courses/CS361"
+# thefuck plugin
+thefuck --alias | source

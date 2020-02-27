@@ -19,6 +19,9 @@ switch (uname)
 		set -gx PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
 
+# shortcut to dotfiles
+abbr -a -g dots "cd ~/Code/dotfiles/"
+
 # shortcuts to courses
 switch (uname)
 	case Darwin

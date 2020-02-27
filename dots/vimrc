@@ -19,6 +19,11 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=20
 
+" toggle tabs
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>  
+
 silent! if plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify' " start screen
 Plug 'tpope/vim-fugitive' " git wrapper

@@ -3,9 +3,6 @@ set number
 set relativenumber
 
 syntax on
-source ~/.vim/plugged/dracula/autoload/dracula.vim
-source ~/.vim/colors/dracula.vim
-colorscheme dracula
 
 set mouse=nicr
 
@@ -22,20 +19,14 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=20
 
-command! MakeTags !ctags -R .
-
 silent! if plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify' " start screen
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'airblade/vim-gitgutter' " git line changes
 Plug 'vim-airline/vim-airline' " buttom line
-Plug 'vim-airline/vim-airline-themes'
 Plug 'python/black'
-Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 endif
-
-let g:airline_theme='atomic'
 
 let g:pymode_python = 'python3'
 let g:python_highlight_all = 1

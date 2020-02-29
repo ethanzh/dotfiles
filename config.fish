@@ -3,6 +3,7 @@ set fish_greeting
 
 # path
 set -gx PATH /usr/local/bin $PATH
+set -gx PATH ~/anaconda3/bin $PATH 
 
 # fish configuration
 abbr -a -g fc vim ~/.config/fish/config.fish
@@ -42,6 +43,10 @@ switch (uname)
 	case Linux
 		abbr -a -g update "sudo pacman -Syu"
 end
+
+# python venv
+abbr -a -g gs "git status"
+abbr -a -g pipr "pip install -r requirements.txt"
 
 # git shortcuts
 abbr -a -g gs "git status"

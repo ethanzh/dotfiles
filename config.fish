@@ -46,7 +46,7 @@ end
 
 # python venv
 abbr -a -g gs "git status"
-abbr -a -g pipr "pip install -r requirements.txt"
+abbr -a -g pipr "activate;pip install -r requirements.txt"
 
 # git shortcuts
 abbr -a -g gs "git status"

@@ -37,7 +37,7 @@ Plug 'mhinz/vim-startify' " start screen
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'airblade/vim-gitgutter' " git line changes
 Plug 'vim-airline/vim-airline' " buttom line
-Plug 'python/black'
+"Plug 'python/black'
 Plug 'davidhalter/jedi-vim'
 call plug#end()
 endif

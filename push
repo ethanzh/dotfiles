@@ -17,3 +17,11 @@ if [ "$1" == "fish" ]; then
 	git push
 	echo "Pushed config.fish"
 fi
+
+if [ "$1" == "brew" ]; then
+    cp ~/Code/dotfiles/Brewfile Brewfile
+	git add Brewfile 
+	git commit -m "Edit Brewfile"
+	git push
+	echo "Pushed Brewfile"
+fi

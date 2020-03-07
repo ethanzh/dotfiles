@@ -18,6 +18,8 @@ set expandtab
 
 nnoremap <C-c> :close<CR>
 
+autocmd Filetype haskell setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 set tags=tags;/
 nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
@@ -28,9 +30,11 @@ set foldmethod=indent
 set foldlevel=20
 
 " toggle tabs
-map gn :bn<cr>
-map gp :bp<cr>
-map gd :bd<cr>  
+map <TAB> :tabn<CR>
+map <S-TAB> :tabp<CR>
+
+" open in new tab
+cabbrev t tabnew
 
 silent! if plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify' " start screen

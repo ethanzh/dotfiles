@@ -54,3 +54,6 @@ abbr -a -g glog "git log --all --decorate --oneline --graph"
 
 # thefuck plugin
 thefuck --alias | source
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ethanzh/google-cloud-sdk/path.fish.inc' ]; . '/Users/ethanzh/google-cloud-sdk/path.fish.inc'; end

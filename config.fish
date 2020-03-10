@@ -23,6 +23,9 @@ end
 # shortcut to dotfiles
 abbr -a -g dots "cd ~/Code/dotfiles/"
 
+# shortcut to recorda
+abbr -a -g recorda "cd ~/Code/recorda-django/recorda/api; vim -p views.py models.py urls.py"
+
 # shortcuts to courses
 switch (uname)
 	case Darwin

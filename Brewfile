@@ -1,2 +1,3 @@
 fzf
 graphviz
+nmap

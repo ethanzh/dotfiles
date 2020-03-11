@@ -1,3 +1,4 @@
 fzf
 graphviz
 nmap
+cowsay

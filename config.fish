@@ -17,6 +17,8 @@ abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"
 
 # feverbase server
 abbr -a -g fever "ssh root@159.65.71.64"
+abbr -a -g fever_f "ssh root@159.89.142.177"
+abbr -a -g fever_ms "ssh root@165.227.62.191"
 
 switch (uname)
 	case Linux

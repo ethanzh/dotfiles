@@ -9,6 +9,19 @@ set -gx PATH ~/anaconda3/bin $PATH
 abbr -a -g fc vim ~/.config/fish/config.fish
 abbr -a -g theme fish_config
 
+# pbcopy/pbpaste
+switch (uname)
+    case Linux
+        abbr -a -g pbcopy 'xclip -selection clipboard'
+        abbr -a -g pbpaste 'xclip -selection clipboard -o'
+end
+
+# smart caps lock on linux
+switch (uname)
+    case Linux
+        setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
+end
+
 # for python venv
 abbr -a -g activate ". venv/bin/activate.fish"
 
@@ -19,6 +32,9 @@ abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"
 abbr -a -g fever "ssh root@159.65.71.64"
 abbr -a -g fever_f "ssh root@159.89.142.177"
 abbr -a -g fever_ms "ssh root@165.227.62.191"
+
+# scooter scraper
+abbr -a -g ss "ssh root@138.68.49.152"
 
 switch (uname)
 	case Linux

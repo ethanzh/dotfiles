@@ -16,12 +16,6 @@ switch (uname)
         abbr -a -g pbpaste 'xclip -selection clipboard -o'
 end
 
-# smart caps lock on linux
-switch (uname)
-    case Linux
-        setxkbmap -option 'caps:ctrl_modifier' && xcape -e 'Caps_Lock=Escape' &
-end
-
 # for python venv
 abbr -a -g activate ". venv/bin/activate.fish"
 

@@ -1,15 +1,11 @@
-execute pathogen#infect()
+" basics
 filetype on
 set number
 set relativenumber
-
 syntax on
-
-set mouse=nicr
-
-let mapleader = ","
-
+set mouse=a
 filetype plugin indent on
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -17,18 +13,20 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-nnoremap <C-c> :close<CR>
+" Swap ; and :
+nnoremap ; :
 
+" language specific indentation
 autocmd Filetype haskell setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype c setlocal autoindent cindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
-set tags=tags;/
-nnoremap <leader>. :CtrlPTag<cr>
-nnoremap <silent> <Leader>b :TagbarToggle<CR>
-
-set backspace=indent,eol,start
-
+" folding
 set foldmethod=indent
 set foldlevel=20
+
+" fix backspace behavior
+set backspace=indent,eol,start
 
 " toggle tabs
 map <TAB> :tabn<CR>
@@ -37,43 +35,20 @@ map <S-TAB> :tabp<CR>
 " open in new tab
 cabbrev t tabnew
 
-silent! if plug#begin('~/.vim/plugged')
-Plug 'mhinz/vim-startify' " start screen
-Plug 'tpope/vim-fugitive' " git wrapper
-Plug 'airblade/vim-gitgutter' " git line changes
-Plug 'vim-airline/vim-airline' " buttom line
-Plug 'davidhalter/jedi-vim'
-call plug#end()
-endif
 
-let g:pymode_python = 'python3'
-let g:python_highlight_all = 1
+" vertical bar at 81st column
+highlight ColorColumn ctermbg=grey
+call matchadd('ColorColumn', '\%81v', 100)
 
-" Javascript indentation
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
-
+" highlight search results
 set incsearch
 set hlsearch
 nnoremap <C-l> :nohlsearch<CR><C-l>
 hi Search cterm=NONE ctermfg=red ctermbg=blue
 
-set bs=2
-
-set updatetime=150
-
-" Swap ; and :
-nnoremap ; :
-
-let g:netrw_banner = 0
-
-highlight ColorColumn ctermbg=grey
-call matchadd('ColorColumn', '\%81v', 100)
-
-autocmd Filetype c setlocal autoindent cindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
+" blink search results on n/N
 nnoremap <silent> n n:call HLNext(0.1)<cr>
 nnoremap <silent> N N:call HLNext(0.1)<cr>
-
 function! HLNext (blinktime)
   let target_pat = '\c\%#'.@/
   let ring = matchadd('ErrorMsg', target_pat, 101)

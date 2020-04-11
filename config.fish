@@ -9,6 +9,9 @@ set -gx PATH ~/anaconda3/bin $PATH
 abbr -a -g fc vim ~/.config/fish/config.fish
 abbr -a -g theme fish_config
 
+# print shell file
+abbr -a -g shell "cat ~/Code/shell/README.md"
+
 # pbcopy/pbpaste
 switch (uname)
     case Linux

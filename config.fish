@@ -20,7 +20,7 @@ switch (uname)
 end
 
 # for python venv
-abbr -a -g activate ". venv/bin/activate.fish"
+abbr -a -g a ". venv/bin/activate.fish"
 
 # utcs lab
 abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"

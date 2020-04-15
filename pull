@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# pull specific dotfile from git
-
 git pull
 
 if [ "$1" == "vimrc" ]; then

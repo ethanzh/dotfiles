@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# comment
 git pull
 
 if [ "$1" == "vimrc" ]; then

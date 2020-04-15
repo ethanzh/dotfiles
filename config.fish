@@ -1,6 +1,9 @@
 # remove fish prompt
 set fish_greeting
 
+# GPG signing
+set -x GPG_TTY (tty)
+
 # path
 set -gx PATH /usr/local/bin $PATH
 set -gx PATH ~/anaconda3/bin $PATH 

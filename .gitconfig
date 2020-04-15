@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+	email = ethan.houston@gmail.com
+	signingkey = ECBAA5734513560C
+# Please adapt and uncomment the following lines:
+	name = Ethan Houston
+	email = ethan.houston@gmail.com
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

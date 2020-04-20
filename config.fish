@@ -9,7 +9,7 @@ set -gx PATH /usr/local/bin $PATH
 set -gx PATH ~/anaconda3/bin $PATH 
 
 # pomodoro technique
-abbr -a -g pomo "cd ~/Code/pomodoro;date >> README.md;echo "" >> README.md;vim + README.md"
+abbr -a -g pomo "cd ~/Code/pomodoro;date >> README.md;echo "" >> README.md;vim + README.md;"
 
 # fish configuration
 abbr -a -g fc vim ~/.config/fish/config.fish

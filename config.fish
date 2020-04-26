@@ -2,16 +2,7 @@
 set fish_greeting
 
 # vi bindings
-
-function fish_mode_prompt
-    # NOOP - Disable vim mode indicator
-end
-
 fish_vi_key_bindings
-set fish_bind_mode instert
-set fish_cursor_default line
-set fish_cursor_insert line
-set fish_cursor_visual line
 
 # GPG signing
 set -x GPG_TTY (tty)

@@ -35,9 +35,11 @@ abbr -a -g a ". venv/bin/activate.fish"
 abbr -a -g lab "ssh ethanzh@kierkegaard.cs.utexas.edu"
 
 # feverbase server
-abbr -a -g fever "ssh root@159.65.71.64"
-abbr -a -g fever_f "ssh root@159.89.142.177"
+abbr -a -g fever_test "ssh root@64.227.48.17"
 abbr -a -g fever_ms "ssh root@165.227.62.191"
+
+# minecraft
+abbr -a -g mc "ssh root@138.68.49.152"
 
 # utcs
 abbr -a -g utcs "ssh ethanzh@kierkegaard.cs.utexas.edu"

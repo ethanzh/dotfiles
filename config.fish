@@ -18,6 +18,10 @@ abbr -a -g pomo "cd ~/Code/pomodoro;echo -e "" >> README.md;date >> README.md;vi
 abbr -a -g fc vim ~/.config/fish/config.fish
 abbr -a -g theme fish_config
 
+# :q and :wq to quit
+abbr -a -g :q exit
+abbr -a -g :wq exit
+
 # print shell file
 abbr -a -g shell "cat ~/Code/shell/README.md"
 
@@ -91,7 +95,10 @@ abbr -a -g pipr "activate;pip install -r requirements.txt"
 
 # git shortcuts
 abbr -a -g gs "git status"
-abbr -a -g glog "git log --all --decorate --oneline --graph"
+abbr -a -g gp "git pull"
+abbr -a -g gd "git diff"
+abbr -a -g gsm "git switch master"
+abbr -a -g glog "git log --no-merges --graph --oneline --decorate master..HEAD"
 
 # ls shortcut
 abbr -a -g l "ls -la"
@@ -101,3 +108,5 @@ thefuck --alias | source
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ethanzh/google-cloud-sdk/path.fish.inc' ]; . '/Users/ethanzh/google-cloud-sdk/path.fish.inc'; end
+
+eval (direnv hook fish)

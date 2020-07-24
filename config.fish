@@ -100,6 +100,7 @@ abbr -a -g gd "git diff"
 abbr -a -g gsm "git switch master"
 abbr -a -g glog "git log --no-merges --graph --oneline --decorate master..HEAD"
 abbr -a -g gr "git rebase -i HEAD~(git log --no-merges --graph --oneline --decorate master..HEAD | wc -l | tr -d ' ')"
+abbr -a -g gpf "git push -f origin (git branch --show-current)"
 
 # ls shortcut
 abbr -a -g l "ls -la"
